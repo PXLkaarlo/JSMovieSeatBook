@@ -5,16 +5,15 @@ const count = document.getElementById('count'); // use innerHTML to show seats s
 const total = document.getElementById('total'); // use innerHTML to show payment total
 const movieSelect = document.getElementById('movie');
 
-
+let movieData = [];
 fetch('movieDB.json')
-    .then(response => response.json())
-    .then(movieDB => {
-        let movieData = movieDB.movies;
-    })
-    .catch(error => console.error('Error fetching movie data:', error));
-    console.log(movieData);
+  .then((response) => response.json())
+  .then((movieDB) => {
+    movieData = movieDB.movies;
+  })
+  .catch((error) => console.error('Error fetching movie data:', error));
 
-
+console.log(movieData);
 
 // for (let o of movieDB.movies) {
 //     const option = document.createElement('option');
@@ -27,25 +26,23 @@ fetch('movieDB.json')
 //     console.log(option);
 // }
 
-
 let ticketPrice = +movieSelect.value; // + converts string to number
 
 function updateSeatAndPrice() {
-    const selectedSeats = document.querySelectorAll('.seat.selected');
-    const selectedCount = selectedSeats.length;
+  const selectedSeats = document.querySelectorAll('.seat.selected');
+  const selectedCount = selectedSeats.length;
 
-    ticketPrice = +movieSelect.value;
+  ticketPrice = +movieSelect.value;
 
-    count.innerHTML = selectedCount - 1;
-    total.innerHTML = `${(selectedCount - 1) * ticketPrice} kr`;
+  count.innerHTML = selectedCount - 1;
+  total.innerHTML = `${(selectedCount - 1) * ticketPrice} kr`;
 }
 
-
 for (let seat of seats) {
-    seat.addEventListener('click', () => {
-        seat.classList.toggle('selected');
-        updateSeatAndPrice();
-    });
+  seat.addEventListener('click', () => {
+    seat.classList.toggle('selected');
+    updateSeatAndPrice();
+  });
 }
 
 movieSelect.addEventListener('change', () => updateSeatAndPrice());

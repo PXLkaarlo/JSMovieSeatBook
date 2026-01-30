@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>Movie Seat Booking</title>
   </head>
   <body>
@@ -11,12 +11,7 @@
     <div class="movie-container">
       <label for="movie">Pick a movie:</label>
 
-      <select name="movie" id="movie">
-        <option value="100">The Lion King (100 kr)</option>
-        <option value="40">Mowgli: Legend of the Jungle (40 kr)</option>
-        <option value="120">Doctor Strange (120 kr)</option>
-        <option value="60">John Wick (60 kr)</option>
-      </select>
+      <select name="movie" id="movie"></select>
     </div>
 
     <ul class="showcase">
@@ -118,6 +113,6 @@
       <!-- And is the price of the "selected movie" per seat? -->
     </p>
 
-    <script type="module" src="script/script.js"></script>
+    <script type="module" src="/src/script/script.js"></script>
   </body>
 </html>

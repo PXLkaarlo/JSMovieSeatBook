@@ -20,3 +20,7 @@ Eitherway i'll make a full list of each commit, along with a quick note on my th
 - Commit 5. This day I got a bit of help with understanding ESlint and node.js. Mainly what the packeges are for and the installation process. With that done I Could finaly focus on the database. After some irretating finnecky casing. I'm used to PascalCasing, but in js and json that doesn't work.
 - Commit 6. This is the same day as previus commit. Here I implemented what the teacher taught me this day, into my desktop computer at home.
 - Merge 1. This is where I merged the first branch I made into the main branch.
+
+This may be useful later in .gitignore
+/.vscode
+node_modules

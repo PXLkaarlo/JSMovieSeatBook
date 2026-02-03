@@ -1,15 +1,7 @@
-
-export class Movie {
-    constructor(title, year, price, poster) {
-        this.title = title;
-        this.year = year;
-        this.price = price;
-        this.poster = poster;
-    }
-}
+import { Movie } from './model/Movie.js';
 
 export async function loadMovies() {
-    const response = await fetch('/src/script/movieDB.json');
+    const response = await fetch('/src/context/movies.json');
     const data = await response.json();
 
     const sortArray = data.map(

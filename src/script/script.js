@@ -1,11 +1,11 @@
-// Gather emelements from the DOM
 const container = document.querySelector('.container');
 const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 const count = document.getElementById('count'); // use innerHTML to show seats selected
 const total = document.getElementById('total'); // use innerHTML to show payment total
 const movieSelect = document.getElementById('movie');
 
-import { Movie, loadMovies } from './data.js';
+import { Movie } from './model/Movie.js';
+import { loadMovies } from './repository.js';
 
 
 const movieList = await loadMovies();

@@ -24,3 +24,6 @@ Eitherway i'll make a full list of each commit, along with a quick note on my th
 This may be useful later in .gitignore
 /.vscode
 node_modules
+
+do this later:
+npm install -g json-server

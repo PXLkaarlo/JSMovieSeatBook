@@ -1,7 +1,7 @@
-import { Movie } from './model/Movie.js';
+import { Movie } from '../model/movie.js';
 
 export async function loadMovies() {
-    const response = await fetch('/src/context/movies.json');
+    const response = await fetch('/src/database/movies.json');
     const data = await response.json();
 
     const sortArray = data.map(

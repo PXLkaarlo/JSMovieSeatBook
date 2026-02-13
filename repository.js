@@ -1,4 +1,4 @@
-import { Movie } from '../model/movie.js';
+import { Movie } from './movie.js';
 
 export async function loadMovies() {
     const response = await fetch('/src/database/movies.json');

@@ -4,8 +4,8 @@ const count = document.getElementById('count'); // use innerHTML to show seats s
 const total = document.getElementById('total'); // use innerHTML to show payment total
 const movieSelect = document.getElementById('movie');
 
-import { loadMovies } from './src/script/data/repository.js';
-import { fillMovieList, updateSeatAndPrice, updatePoster } from './src/script/data/engine.js';
+import { loadMovies } from './repository.js';
+import { fillMovieList, updateSeatAndPrice, updatePoster } from './engine.js';
 
 const movieList = await loadMovies();
 let ticketPrice = +movieSelect.value; // + converts string to number

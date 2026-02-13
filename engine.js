@@ -1,4 +1,4 @@
-import { Movie } from '../model/movie.js';
+import { Movie } from './movie.js';
 
 
 export function fillMovieList(movieList, movieSelect, screen) {
